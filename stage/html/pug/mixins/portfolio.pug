@@ -1,0 +1,11 @@
+include ../varriables/portfolio
+mixin portfolioOffers(portfolioOffers)
+    .row.g-xl-3.gy-5
+        each offer in portfolioOffers
+            .col-xl.col-md-6.offer
+                .box
+                    .back 
+                        h5= offer.title
+                        p= offer.desc
+                    .face
+                        img(src='img/portfolio-image.png')

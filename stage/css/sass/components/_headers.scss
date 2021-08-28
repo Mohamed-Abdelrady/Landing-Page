@@ -1,0 +1,28 @@
+%header {
+  color: $headerColor;
+  font-weight: 700;
+  line-height: 2.8rem;
+  text-transform: capitalize;
+  letter-spacing: 0.25px;
+  margin: 0;
+}
+%mainHeader {
+  @extend %header;
+  font-size: 1.9rem;
+  span:first-of-type {
+    color: $lightBlueColor;
+  }
+  span:last-of-type {
+    color: $lightRedColor;
+  }
+}
+%secHeader {
+  @extend %header;
+  font-size: 1.2rem;
+}
+%paragraph {
+  color: $pColor;
+  font-size: 1rem;
+  line-height: 30px;
+  margin: 20px 0 30px;
+}

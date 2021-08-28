@@ -1,0 +1,21 @@
+- var pageTitle = "Homepage"
+include pug/mixins/aboutus
+include pug/mixins/services
+include pug/mixins/portfolio
+include pug/mixins/blog
+doctype html
+html(lang="en")
+    head
+        include pug/structure/meta
+        include pug/structure/styles
+    body
+        include pug/components/navbar
+        include pug/layout/banner
+        include pug/layout/aboutUs
+        include pug/layout/services
+        include pug/layout/portfolio
+        include pug/layout/blog
+        include pug/layout/contactUs
+        include pug/layout/footer
+        include pug/components/goUpBtn
+        include pug/structure/scripts

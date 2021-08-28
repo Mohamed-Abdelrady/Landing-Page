@@ -1,0 +1,8 @@
+mixin skillsPercent(skills)
+    .mySkills
+        each skill in skills
+            .skill 
+                h5.position-relative= skill.title
+                    span.position-absolute(style=`left: calc(${skill.percent} - 4%)`)= skill.percent 
+                .progress
+                    .progress-bar(role='progressbar' style=`width: ${skill.percent}`)

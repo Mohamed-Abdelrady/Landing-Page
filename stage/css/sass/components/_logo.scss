@@ -1,0 +1,20 @@
+@mixin logo($bgColor) {
+  color: $whiteColor;
+  background: $bgColor;
+  border-radius: 8px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 53px;
+  font-weight: bold;
+  font-size: 2rem;
+  transition: $transition;
+  &:hover {
+    color: $whiteColor;
+    @if $bgColor == $lightBlueColor {
+      background-color: $lightRedColor;
+    } @else {
+      background-color: $lightBlueColor;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+include ../varriables/blog
+
+//- mixin big main blog on left 
+mixin mainNews(mainBlogs)
+    each mainBlog in mainBlogs
+        .main-card
+            img.w-100(src='img/big-blog-thumb.jpg')
+            .text
+                .card-body
+                    ul.list-unstyled.d-flex
+                        - const badge = mainBlog.badges
+                        if (badge != undefined)
+                            li
+                                i.fa.fa-calendar-alt
+                                |#{badge.date}
+                            li
+                                i.fa.fa-users
+                                |#{badge.section}
+                    h5.card-title= mainBlog.title
+                    p.card-text= mainBlog.desc
+                    a(href="#") Discover More  
+                        i.fas.fa-arrow-right
+
+//- mixin side main blog on right 
+mixin sideNews(sideBlogs)
+    each sideBlog in sideBlogs
+        .side-card.mb-5
+            .row.gx-2
+                .col
+                    .card-body
+                        span
+                            i.fa.fa-calendar-alt
+                            |#{sideBlog.date}
+                        h5.card-title= sideBlog.title
+                        p.card-text= sideBlog.desc
+                        a(href="#") Discover More  
+                            i.fas.fa-arrow-right
+                .col
+                    img.w-100.h-100(src='img/blog-thumb.jpg')

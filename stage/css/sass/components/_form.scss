@@ -1,0 +1,30 @@
+form {
+  background-color: $whiteColor;
+  border-radius: 30px;
+  padding: 30px 15px;
+  input,
+  textarea {
+    border-radius: 30px;
+    border: 0;
+    background-color: rgba($lightBlueColor, 0.18);
+    color: $pColor;
+    padding: 12px 25px;
+    width: 100%;
+    &::placeholder {
+      color: $pColor;
+    }
+    &:focus {
+      outline: 0;
+    }
+  }
+  textarea {
+    height: 200px;
+    resize: none;
+    margin-bottom: 0;
+  }
+  button {
+    @include button($lightBlueColor);
+    border: 0;
+    display: inline-block;
+  }
+}

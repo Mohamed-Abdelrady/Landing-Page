@@ -1,0 +1,32 @@
+.services {
+  padding: 50px 0;
+  @include media-breakpoint-down(lg) {
+    padding: 15px 0 0;
+    margin-top: -45px;
+  }
+  h2 {
+    @extend %mainHeader;
+  }
+  p {
+    @extend %paragraph;
+  }
+  .mySkills {
+    .skill {
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+      h5 {
+        @extend %secHeader;
+        span {
+          color: $lightBlueColor !important;
+        }
+      }
+      .progress {
+        height: 8px;
+        .progress-bar {
+          background-image: linear-gradient(to right, #f98c1b, $lightRedColor);
+        }
+      }
+    }
+  }
+}

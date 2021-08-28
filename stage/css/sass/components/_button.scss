@@ -1,0 +1,19 @@
+@mixin button($bgColor) {
+  background-color: $bgColor;
+  color: $whiteColor !important;
+  padding: 8px 20px 10px;
+  border-radius: 20px;
+  transition: $transition;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    @if $bgColor == $lightBlueColor {
+      background-color: $lightRedColor;
+    } @else {
+      background-color: $lightBlueColor;
+    }
+  }
+}

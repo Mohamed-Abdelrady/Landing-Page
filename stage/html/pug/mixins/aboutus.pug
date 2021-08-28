@@ -1,0 +1,14 @@
+include ../varriables/aboutus
+mixin aboutusServices (services)
+    .row.g-xl-4.g-1.justify-content-center
+        each service in services
+            .col-lg-6.mb-xl-0.mb-3.col-md-8.col-10
+                .service
+                    .row.align-items-baseline
+                        .col-3
+                            span.fa-stack.fa-1x.mt-4
+                                i.fas.fa-circle.fa-stack-1x.fa-4x
+                                i.fas.fa-stack-1x.fa-2x.center-icon(class=service.icon)
+                        .col
+                            h3= service.title
+                            p= service.desc

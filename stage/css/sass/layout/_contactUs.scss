@@ -1,0 +1,42 @@
+@import '../components/form';
+.contact-us {
+  background-image: url(../img/contact-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 30px 0 60px;
+  @include media-breakpoint-down(lg) {
+    margin-top: 20px;
+  }
+  h2 {
+    @extend %mainHeader;
+    color: $whiteColor;
+  }
+  p {
+    @extend %paragraph;
+    color: $whiteColor;
+  }
+  h4 {
+    @extend %secHeader;
+    color: $whiteColor;
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
+    > span {
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+      color: $whiteColor !important;
+      margin-left: 15px;
+      .fa-stack {
+        margin-right: 10px;
+      }
+      svg.center-icon {
+        color: $lightRedColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.blog#blog
+    .container 
+        .row.justify-content-between
+            .col-xl-4.col-12.text-center.text-xl-start.align-self-end
+                h2.mb-3 Check Out What's 
+                    span Trending 
+                    |From Our Latest 
+                    span Blog
+            .col-5.d-none.d-xl-block
+                img.w-75.float-end(src="img/blog-dec.png")
+        .row.gx-3.gy-0 
+            .col-lg-6.col-12
+                +mainNews(blog.main)
+            .col-lg-6.col-12
+                +sideNews(blog.side)
+                

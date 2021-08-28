@@ -1,0 +1,80 @@
+.blog {
+  padding: 50px 0 0;
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 30px;
+  }
+  h2 {
+    @extend %mainHeader;
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 50px !important;
+    }
+  }
+  img {
+    border-radius: 30px;
+  }
+  h5 {
+    @extend %secHeader;
+  }
+  p {
+    @extend %paragraph;
+    margin-bottom: 10px;
+  }
+  a {
+    display: flex;
+    color: $lightBlueColor;
+    text-decoration: none;
+    transition: $transition;
+    svg {
+      align-self: center;
+      margin-left: 8px;
+      margin-top: 2px;
+    }
+    &:hover {
+      color: $lightRedColor;
+    }
+  }
+  .main-card {
+    &:not(:first-of-type) {
+      margin-top: -35px;
+    }
+    ul {
+      li {
+        font-size: 15px;
+        color: $badgeColor;
+        &:not(:last-of-type) {
+          margin-right: 20px;
+        }
+        svg {
+          color: $lightRedColor;
+          margin-right: 7px;
+        }
+      }
+    }
+    .text {
+      width: 90%;
+      margin: 0 auto;
+      background: $whiteColor;
+      box-shadow: 0px 4px 13px 0px #888;
+      border-radius: 30px;
+      transform: translateY(-50%);
+      z-index: 222;
+      .card-body {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+  .side-card {
+    border: 0;
+    border-radius: 30px;
+    overflow: hidden;
+    span {
+      font-size: 15px;
+      color: $badgeColor;
+      svg {
+        color: $lightRedColor;
+        margin-right: 7px;
+      }
+    }
+  }
+}
