@@ -69,7 +69,7 @@ body.active {
           }
           .nav-link {
             color: $pColor;
-            transition: $transition;
+            transition: all 0.2s ease-out;
             font-weight: 500;
             font-size: 1rem;
             letter-spacing: 1px;
